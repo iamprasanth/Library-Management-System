@@ -60,6 +60,7 @@
 		      <th scope="col">Name</th>
 		      <th scope="col">Section</th>
 		      <th scope="col">Assigned Book(ID)</th>
+		      <th scope="col">Issue date</th>
 		      <th scope="col">Assign book</th>
 		      <th scope="col">Delete</th>
 		      <th scope="col">More Details</th>	
@@ -71,6 +72,7 @@
 		      <td><%= kid.studentname %></td>
 		      <td><%= kid.section %></td>
 			<td><%= kid.bookid %></td>
+			<td><% if !(kid.bookid.blank?)%><%=kid.updated_at.strftime("%m/%d/%y")%><%end%></td>
 		      <td><%= link_to 'Assign', edit_kid_path(kid) %></td>
 		      <td><%= link_to 'Delete', kid_path(kid),
 			      method: :delete,
