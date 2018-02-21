@@ -50,9 +50,8 @@ ________________________________________________________________________________
     
 NOTE** By default Assigned Book(ID),Issue date and  Days remaining attributes in student sectio will be null when a
 new student is created .
-As soon as a book is issued to a student the corresponding book id , date of isssue ,and 10 days will be shown in the
-respective columns of the student.
-The number of days will keep reducing by 1 daily
+As soon as a book is issued to a student the corresponding book id , date of issue ,and days remaining ( i.e. 10 ) will be shown in the respective columns of the student.
+The number of days remaining reduces by 1 after each day.
 
 
 
