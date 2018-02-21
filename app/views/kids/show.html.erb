@@ -1,0 +1,19 @@
+<%= link_to 'Home',controller:'home'%>
+<h1>Student Details </h1>
+
+
+
+<p>
+  <strong>Student Name:</strong>
+  <%= @kid.studentname %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= @kid.address %>
+</p>
+<p>
+  <strong>Section:</strong>
+  <%= @kid.section %>
+</p>
+<%= link_to 'Back', kids_path %>

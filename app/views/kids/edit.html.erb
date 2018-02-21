@@ -1,0 +1,33 @@
+<%= link_to 'Home',controller:'home'%>
+
+<h1>Edit Student</h1>
+ 
+<%= form_with(model: @kid) do |form| %>
+ 
+ 
+  <p>
+    <%= form.label :Studentname %><br>
+    <%= form.text_field :studentname%>
+  </p>
+ 
+  <p>
+    <%= form.label :Address %><br>
+    <%= form.text_area :address %>
+  </p>
+ <p>
+    <%= form.label :Section %><br>
+    <%= form.text_area :section %>
+  </p>
+  
+<p>
+    <%= form.label :BookID %><br>
+    <%= form.text_area :bookid %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', kids_path %>

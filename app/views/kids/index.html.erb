@@ -1,0 +1,26 @@
+
+<%= link_to 'Home',controller:'home'%>
+
+
+<%= link_to 'Add New student', new_kid_path %>
+
+<h1>Listing Students</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Section</th>
+  </tr>
+ 
+  <% @kids.each do |kid| %>
+    <tr>
+      <td><%= kid.studentname %></td>
+      <td><%= kid.section %></td>
+      <td><%= link_to 'More Details', kid_path(kid) %></td>
+       <td><%= link_to 'Edit', edit_kid_path(kid) %></td>
+          <td><%= link_to 'Delete', kid_path(kid),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
